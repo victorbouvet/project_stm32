@@ -60,8 +60,8 @@ all: main-build
 main-build: testuart.elf secondary-outputs
 
 # Tool invocations
-testuart.elf testuart.map: $(OBJS) $(USER_OBJS) C:\Users\Victor\STM32CubeIDE\workspace_1.10.1\testuart\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "testuart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Victor\STM32CubeIDE\workspace_1.10.1\testuart\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="testuart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+testuart.elf testuart.map: $(OBJS) $(USER_OBJS) C:\Users\victor.bouvet\STM32CubeIDE\workspace_1.5.1\testuart\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "testuart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\victor.bouvet\STM32CubeIDE\workspace_1.5.1\testuart\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="testuart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
